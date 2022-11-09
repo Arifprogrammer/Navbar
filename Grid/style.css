@@ -1,0 +1,57 @@
+*,*::before,*::after{
+    box-sizing: border-box;
+    margin: 0px;
+}
+.navbar{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    height: 60px;
+    width: 100%;
+    background: linear-gradient(-90deg, rgb(11, 82, 104), rgb(0, 225, 255));
+}
+.navbar>a{
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding-top: 12px;
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+    color: rgb(37, 72, 102);
+    font-weight: 500;
+}
+.a1{
+    background: yellowgreen;
+    grid-column: 2;
+}
+.a2{
+    background: rgb(189, 104, 7);
+}
+.a3{
+    background: rgb(231, 197, 86);
+}
+.a4{
+    background: rgb(11, 158, 48);
+}
+label{
+    grid-column: 10 / -1;
+    font-size: 1.25rem;
+    margin-top: 1rem;
+    color: aliceblue;
+}
+input{
+    width: 12rem;
+    border-radius: 10px;
+    border: 2px solid white;
+}
+@media ( width <= 1000px) {
+    .navbar>a{
+        grid-column: 1 / -1;
+        padding-top: 10px;
+        font-size: clamp(1rem, 1.5vw, 1.5rem);
+    }
+    .navbar{
+        height: 200px;
+    }
+    label{
+        display: none;
+    }
+}
